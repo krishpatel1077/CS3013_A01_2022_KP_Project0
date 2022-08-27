@@ -8,7 +8,7 @@ STEP 1:
 - No tutorials consulted (I have prior work experience with AWS EC2)
 - No issues along the way
 
-STEP 2: View project0.txt
+STEP 2: View project0_s2.txt
 
 STEP3:
 strncpy: #include <string.h>
@@ -16,4 +16,11 @@ exit: #include <stdlib.h>
 printf: #include <stdio.h>
 
 -g Produces debugging information in the operating system's native format (stabs, COFF, XCOFF, or DWARF). GDB can work with this debugging information
+
+View Script on project0_s3.txt
+
+STEP 4:
+
+after running the gdb, the debugger determined that the error was in line 7
+strncpy(buffer, "Hello World!", 14);
 
