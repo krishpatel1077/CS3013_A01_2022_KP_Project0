@@ -1,0 +1,47 @@
+Script started on 2022-08-27 15:13:01+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="120" LINES="30"]
+^[[?2004h^[]0;ubuntu@ip-172-31-28-207: ~^G^[[01;32mubuntu@ip-172-31-28-207^[[00m:^[[01;34m~^[[00m$ uname -a^M
+^[[?2004l^MLinux ip-172-31-28-207 5.15.0-1017-aws #21-Ubuntu SMP Fri Aug 5 11:10:45 UTC 2022 x86_64 x86_64 x86_64 GNU/Linux^M
+^[[?2004h^[]0;ubuntu@ip-172-31-28-207: ~^G^[[01;32mubuntu@ip-172-31-28-207^[[00m:^[[01;34m~^[[00m$ ls^M
+^[[?2004l^Mproject0^M
+^[[?2004h^[]0;ubuntu@ip-172-31-28-207: ~^G^[[01;32mubuntu@ip-172-31-28-207^[[00m:^[[01;34m~^[[00m$ pwd^M
+^[[?2004l^M/home/ubuntu^M
+^[[?2004h^[]0;ubuntu@ip-172-31-28-207: ~^G^[[01;32mubuntu@ip-172-31-28-207^[[00m:^[[01;34m~^[[00m$ cd /home//u^H^[[K^H^[[Kubuntu^M
+^[[?2004l^M^[[?2004h^[]0;ubuntu@ip-172-31-28-207: ~^G^[[01;32mubuntu@ip-172-31-28-207^[[00m:^[[01;34m~^[[00m$ ls^M
+^[[?2004l^Mproject0^M
+^[[?2004h^[]0;ubuntu@ip-172-31-28-207: ~^G^[[01;32mubuntu@ip-172-31-28-207^[[00m:^[[01;34m~^[[00m$ cd ~^M
+^[[?2004l^M^[[?2004h^[]0;ubuntu@ip-172-31-28-207: ~^G^[[01;32mubuntu@ip-172-31-28-207^[[00m:^[[01;34m~^[[00m$ mkdir project0^H^[[K_0^M
+^[[?2004l^M^[[?2004h^[]0;ubuntu@ip-172-31-28-207: ~^G^[[01;32mubuntu@ip-172-31-28-207^[[00m:^[[01;34m~^[[00m$ cd project_0/^H^[[K^M
+^[[?2004l^M^[[?2004h^[]0;ubuntu@ip-172-31-28-207: ~/project_0^G^[[01;32mubuntu@ip-172-31-28-207^[[00m:^[[01;34m~/project_0^[[00m$ man mkdir^M
+^[[?2004l^M^[[?1049h^[[22;0;0t^[[?1h^[=^MMKDIR(1)                                            User Commands                                            MKDIR(1)^[[m^M
+^[[m^M
+^[[1mNAME^[[0m^[[m^M
+       mkdir - make directories^[[m^M
+^[[m^M
+^[[1mSYNOPSIS^[[0m^[[m^M
+       ^[[1mmkdir^[[0m [^[[4mOPTION^[[24m]... ^[[4mDIRECTORY^[[24m...^[[m^M
+^[[m^M
+^[[1mDESCRIPTION^[[0m^[[m^M
+       Create the DIRECTORY(ies), if they do not already exist.^[[m^M
+^[[m^M
+       Mandatory arguments to long options are mandatory for short options too.^[[m^M
+^[[m^M
+       ^[[1m-m^[[0m, ^[[1m--mode^[[0m=^[[4mMODE^[[24m^[[m^M
+              set file mode (as in chmod), not a=rwx - umask^[[m^M
+^[[m^M
+       ^[[1m-p^[[0m, ^[[1m--parents^[[0m^[[m^M
+              no error if existing, make parent directories as needed^[[m^M
+^[[m^M
+       ^[[1m-v^[[0m, ^[[1m--verbose^[[0m^[[m^M
+              print a message for each created directory^[[m^M
+^[[m^M
+       ^[[1m-Z^[[0m     set SELinux security context of each created directory to the default type^[[m^M
+^[[m^M
+       ^[[1m--context^[[0m[=^[[4mCTX^[[24m]^[[m^M
+              like ^[[1m-Z^[[0m, or if CTX is specified then set the SELinux or SMACK security context to CTX^[[m^M
+^[[m^M
+       ^[[1m--help^[[0m display this help and exit^[[m^M
+^[[m^M
+^[[7m Manual page mkdir(1) line 1 (press h for help or q to quit)^[[27m^[[K^M^[[K^[[?1l^[>^[[?1049l^[[23;0;0t^[[?2004h^[]0;ubuntu@ip-172-31-28-207: ~/project_0^G^[[01;32mubuntu@ip-172-31-28-207^[[00m:^[[01;34m~/project0^[[00m$ exit'^H^[[K^M
+^[[?2004l^Mexit^M
+
+Script done on 2022-08-27 15:14:05+00:00 [COMMAND_EXIT_CODE="0"]
