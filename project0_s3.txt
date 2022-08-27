@@ -1,0 +1,375 @@
+Script started on 2022-08-27 16:05:29+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="209" LINES="51"]
+^[[?2004h^[]0;ubuntu@ip-172-31-28-207: ~/project_0^G^[[01;32mubuntu@ip-172-31-28-207^[[00m:^[[01;34m~/project_0^[[00m$ nano test.c^M
+^[[?2004l^M^[[?2004h^[[?1049h^[[22;0;0t^[[1;51r^[(B^[[m^[[4l^[[?7h^[[39;49m^[[?1h^[=^[[?1h^[=^[[?25l^[[39;49m^[(B^[[m^[[H^[[2J^[[49;98H^[(B^[[0;7m[ Reading... ]^[(B^[[m^[[49;97H^[(B^[[0;7m[ Read 10 lines ]^[(B^[[m^[[H^[(B^[[0;7m  GNU nano 6.2                                                                                          test.c                                                                                            I      ^[[1;208H^[(B^[[m^M^[[50d^[(B^[[0;7m^G^[(B^[[m Help^[[50;18H^[(B^[[0;7m^O^[(B^[[m Write Out     ^[(B^[[0;7m^W^[(B^[[m Where Is^[[52G^[(B^[[0;7m^K^[(B^[[m Cut^[[50;69H^[(B^[[0;7m^T^[(B^[[m Execute^[[86G^[(B^[[0;7m^C^[(B^[[m Location^[[103G^[(B^[[0;7mM-U^[(B^[[m Undo^[[50;120H^[(B^[[0;7mM-A^[(B^[[m Set Mark     ^[(B^[[0;7mM-]^[(B^[[m To Bracket   ^[(B^[[0;7mM-Q^[(B^[[m Previous     ^[(B^[[0;7m^B^[(B^[[m Back^[[50;188H^[(B^[[0;7m^M-bM-^WM-^B^[(B^[[m Prev Word^M^[[51d^[(B^[[0;7m^X^[(B^[[m Exit^[[51;18H^[(B^[[0;7m^R^[(B^[[m Read File     ^[(B^[[0;7m^\^[(B^[[m Replace^[[52G^[(B^[[0;7m^U^[(B^[[m Paste^[[51;69H^[(B^[[0;7m^J^[(B^[[m Justify^[[86G^[(B^[[0;7m^/^[(B^[[m Go To Line    ^[(B^[[0;7mM-E^[(B^[[m Redo^[[51;120H^[(B^[[0;7mM-6^[(B^[[m Copy^[[51;137H^[(B^[[0;7m^Q^[(B^[[m Where Was     ^[(B^[[0;7mM-W^[(B^[[m Next^[[51;171H^[(B^[[0;7m^F^[(B^[[m Forward^[[188G^[(B^[[0;7m^M-bM-^VM-8^[(B^[[m Next Word^M^[[2d^[(B^[[0;1m^[[36m#include^[[33m <stdio.h>^M^[[3d^[[36m#include^[[33m <string.h>^M^[[4d^[[36m#include^[[33m <stdlib.h>^M^[[6d^[(B^[[0m^[[32mint^[[39m^[(B^[[m main () {^[[7;4H^[[32mchar^[[39m^[(B^[[m *buffer;^[[8;4Hstrncpy(buffer, ^[(B^[[0;1m^[[33m"Hello, world!"^[[39m^[(B^[[m, 14);^[[9;4Hprintf(^[(B^[[0;1m^[[33m"%s\n"^[[39m^[(B^[[m, buffer);^[[10;4Hexit(0);^M^[[11d}^[[2d^H^[[?12l^[[?25h^[[?25l^[[49d^[[J^[[51d^[[?12l^[[?25h^[[51;1H^[[?1049l^[[23;0;0t^M^[[?1l^[>^[[?2004l^[[?2004h^[]0;ubuntu@ip-172-31-28-207: ~/project_0^G^[[01;32mubuntu@ip-172-31-28-207^[[00m:^[[01;34m~/project_0^[[00m$ gcc test.c -o test^M
+^[[?2004l^M^[[?2004h^[]0;ubuntu@ip-172-31-28-207: ~/project_0^G^[[01;32mubuntu@ip-172-31-28-207^[[00m:^[[01;34m~/project_0^[[00m$ ./test^M
+^[[?2004l^MSegmentation fault (core dumped)^M
+^[[?2004h^[]0;ubuntu@ip-172-31-28-207: ~/project_0^G^[[01;32mubuntu@ip-172-31-28-207^[[00m:^[[01;34m~/project_0^[[00m$ man strncpy^M
+^[[?2004l^M^[[?1049h^[[22;0;0t^[[?1h^[=^MSTRCPY(3)                                                                                Linux Programmer's Manual                                                                                STRCPY(3)^[[m^M
+^[[m^M
+^[[1mNAME^[[0m^[[m^M
+       strcpy, strncpy - copy a string^[[m^M
+^[[m^M
+^[[1mSYNOPSIS^[[0m^[[m^M
+       ^[[1m#include^[[0m ^[[1m<string.h>^[[0m^[[m^M
+^[[m^M
+       ^[[1mchar^[[0m ^[[1m*strcpy(char^[[0m ^[[1m*^[[0m^[[4mdest^[[24m^[[1m,^[[0m ^[[1mconst^[[0m ^[[1mchar^[[0m ^[[1m*^[[0m^[[4msrc^[[24m^[[1m);^[[0m^[[m^M
+^[[m^M
+       ^[[1mchar^[[0m ^[[1m*strncpy(char^[[0m ^[[1m*^[[0m^[[4mdest^[[24m^[[1m,^[[0m ^[[1mconst^[[0m ^[[1mchar^[[0m ^[[1m*^[[0m^[[4msrc^[[24m^[[1m,^[[0m ^[[1msize_t^[[0m ^[[4mn^[[24m^[[1m);^[[0m^[[m^M
+^[[m^M
+^[[1mDESCRIPTION^[[0m^[[m^M
+       The  ^[[1mstrcpy^[[0m()  function  copies the string pointed to by ^[[4msrc^[[24m, including the terminating null byte ('\0'), to the buffer pointed to by ^[[4mdest^[[24m.  The strings may not overlap, and the destination string^[[m^M
+       ^[[4mdest^[[24m must be large enough to receive the copy.  ^[[4mBeware^[[24m ^[[4mof^[[24m ^[[4mbuffer^[[24m ^[[4moverruns!^[[24m  (See BUGS.)^[[m^M
+^[[m^M
+       The ^[[1mstrncpy^[[0m() function is similar, except that at most ^[[4mn^[[24m bytes of ^[[4msrc^[[24m are copied.  ^[[1mWarning^[[0m: If there is no null byte among the first ^[[4mn^[[24m bytes of ^[[4msrc^[[24m, the string placed in ^[[4mdest^[[24m will not be null-terM-bM-^@M-^P^[[m^M
+       minated.^[[m^M
+^[[m^M
+       If the length of ^[[4msrc^[[24m is less than ^[[4mn^[[24m, ^[[1mstrncpy^[[0m() writes additional null bytes to ^[[4mdest^[[24m to ensure that a total of ^[[4mn^[[24m bytes are written.^[[m^M
+^[[m^M
+       A simple implementation of ^[[1mstrncpy^[[0m() might be:^[[m^M
+^[[m^M
+           char *^[[m^M
+           strncpy(char *dest, const char *src, size_t n)^[[m^M
+           {^[[m^M
+               size_t i;^[[m^M
+^[[m^M
+               for (i = 0; i < n && src[i] != '\0'; i++)^[[m^M
+                   dest[i] = src[i];^[[m^M
+               for ( ; i < n; i++)^[[m^M
+                   dest[i] = '\0';^[[m^M
+^[[m^M
+               return dest;^[[m^M
+           }^[[m^M
+^[[m^M
+^[[1mRETURN^[[0m ^[[1mVALUE^[[0m^[[m^M
+       The ^[[1mstrcpy^[[0m() and ^[[1mstrncpy^[[0m() functions return a pointer to the destination string ^[[4mdest^[[24m.^[[m^M
+^[[m^M
+^[[1mATTRIBUTES^[[0m^[[m^M
+       For an explanation of the terms used in this section, see ^[[1mattributes^[[0m(7).^[[m^M
+^[[m^M
+       M-bM-^TM-^LM-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-,M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-,M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^P^[[m^M
+       M-bM-^TM-^B^[[1mInterface^[[0m           M-bM-^TM-^B ^[[1mAttribute^[[0m     M-bM-^TM-^B ^[[1mValue^[[0m   M-bM-^TM-^B^[[m^M
+       M-bM-^TM-^\M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-<M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-<M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-$^[[m^M
+       M-bM-^TM-^B^[[1mstrcpy^[[0m(), ^[[1mstrncpy^[[0m() M-bM-^TM-^B Thread safety M-bM-^TM-^B MT-Safe M-bM-^TM-^B^[[m^M
+       M-bM-^TM-^TM-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-4M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-4M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^X^[[m^M
+^[[1mCONFORMING^[[0m ^[[1mTO^[[0m^[[m^M
+       POSIX.1-2001, POSIX.1-2008, C89, C99, SVr4, 4.3BSD.^[[m^M
+^[[m^M
+^[[7m Manual page strncpy(3) line 1 (press h for help or q to quit)^[[27m^[[K^M^[[K^[[?1l^[>^[[?1049l^[[23;0;0t^[[?2004h^[]0;ubuntu@ip-172-31-28-207: ~/project_0^G^[[01;32mubuntu@ip-172-31-28-207^[[00m:^[[01;34m~/project_0^[[00m$ man c^H^[[Kprintf^M
+^[[?2004l^M^[[?1049h^[[22;0;0t^[[?1h^[=^MPRINTF(1)                                                                                      User Commands
+                          PRINTF(1)^[[m^M
+^[[m^M
+^[[1mNAME^[[0m^[[m^M
+       printf - format and print data^[[m^M
+^[[m^M
+^[[1mSYNOPSIS^[[0m^[[m^M
+       ^[[1mprintf^[[0m ^[[4mFORMAT^[[24m [^[[4mARGUMENT^[[24m]...^[[m^M
+       ^[[1mprintf^[[0m ^[[4mOPTION^[[24m^[[m^M
+^[[m^M
+^[[1mDESCRIPTION^[[0m^[[m^M
+       Print ARGUMENT(s) according to FORMAT, or execute according to OPTION:^[[m^M
+^[[m^M
+       ^[[1m--help^[[0m display this help and exit^[[m^M
+^[[m^M
+       ^[[1m--version^[[0m^[[m^M
+              output version information and exit^[[m^M
+^[[m^M
+       FORMAT controls the output as in C printf.  Interpreted sequences are:^[[m^M
+^[[m^M
+       \"     double quote^[[m^M
+^[[m^M
+       \\     backslash^[[m^M
+^[[m^M
+       \a     alert (BEL)^[[m^M
+^[[m^M
+       \b     backspace^[[m^M
+^[[m^M
+       \c     produce no further output^[[m^M
+^[[m^M
+       \e     escape^[[m^M
+^[[m^M
+       \f     form feed^[[m^M
+^[[m^M
+       \n     new line^[[m^M
+^[[m^M
+       \r     carriage return^[[m^M
+^[[m^M
+       \t     horizontal tab^[[m^M
+^[[m^M
+       \v     vertical tab^[[m^M
+^[[m^M
+       \NNN   byte with octal value NNN (1 to 3 digits)^[[m^M
+^[[m^M
+       \xHH   byte with hexadecimal value HH (1 to 2 digits)^[[m^M
+^[[m^M
+       \uHHHH Unicode (ISO/IEC 10646) character with hex value HHHH (4 digits)^[[m^M
+^[[m^M
+       \UHHHHHHHH^[[m^M
+              Unicode character with hex value HHHHHHHH (8 digits)^[[m^M
+^[[m^M
+^[[7m Manual page printf(1) line 1 (press h for help or q to quit)^[[27m^[[K^M^[[K^[[?1l^[>^[[?1049l^[[23;0;0t^[[?2004h^[]0;ubuntu@ip-172-31-28-207: ~/project_0^G^[[01;32mubuntu@ip-172-31-28-207^[[00m:^[[01;34m~/project_0^[[00m$ man exit^M
+^[[?2004l^M^[[?1049h^[[22;0;0t^[[?1h^[=^MEXIT(3)                                                                                  Linux Programmer's Manual
+                            EXIT(3)^[[m^M
+^[[m^M
+^[[1mNAME^[[0m^[[m^M
+       exit - cause normal process termination^[[m^M
+^[[m^M
+^[[1mSYNOPSIS^[[0m^[[m^M
+       ^[[1m#include^[[0m ^[[1m<stdlib.h>^[[0m^[[m^M
+^[[m^M
+       ^[[1mvoid^[[0m ^[[1mexit(int^[[0m ^[[4mstatus^[[24m^[[1m);^[[0m^[[m^M
+^[[m^M
+^[[1mDESCRIPTION^[[0m^[[m^M
+       The ^[[1mexit^[[0m() function causes normal process termination and the least significant byte of ^[[4mstatus^[[24m (i.e., ^[[4mstatus^[[24m ^[[4m&^[[24m ^[[4m0xFF^[[24m) is returned to the parent (see ^[[1mwait^[[0m(2)).^[[m^M
+^[[m^M
+       All  functions registered with ^[[1matexit^[[0m(3) and ^[[1mon_exit^[[0m(3) are called, in the reverse order of their registration.  (It is possible for one of these functions to use ^[[1matexit^[[0m(3) or ^[[1mon_exit^[[0m(3) to regisM-bM-^@M-^P^[[m^M
+       ter an additional function to be executed during exit processing; the new registration is added to the front of the list of functions that remain to be called.)  If one of these functions does not^[[m^M
+       return  (e.g., it calls ^[[1m_exit^[[0m(2), or kills itself with a signal), then none of the remaining functions is called, and further exit processing (in particular, flushing of ^[[1mstdio^[[0m(3) streams) is abanM-bM-^@M-^P^[[m^M
+       doned.  If a function has been registered multiple times using ^[[1matexit^[[0m(3) or ^[[1mon_exit^[[0m(3), then it is called as many times as it was registered.^[[m^M
+^[[m^M
+       All open ^[[1mstdio^[[0m(3) streams are flushed and closed.  Files created by ^[[1mtmpfile^[[0m(3) are removed.^[[m^M
+^[[m^M
+       The C standard specifies two constants, ^[[1mEXIT_SUCCESS^[[0m and ^[[1mEXIT_FAILURE^[[0m, that may be passed to ^[[1mexit^[[0m() to indicate successful or unsuccessful termination, respectively.^[[m^M
+^[[m^M
+^[[1mRETURN^[[0m ^[[1mVALUE^[[0m^[[m^M
+       The ^[[1mexit^[[0m() function does not return.^[[m^M
+^[[m^M
+^[[1mATTRIBUTES^[[0m^[[m^M
+       For an explanation of the terms used in this section, see ^[[1mattributes^[[0m(7).^[[m^M
+^[[m^M
+       M-bM-^TM-^LM-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-,M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-,M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^P^[[m^M
+       M-bM-^TM-^B^[[1mInterface^[[0m M-bM-^TM-^B ^[[1mAttribute^[[0m     M-bM-^TM-^B ^[[1mValue^[[0m               M-bM-^TM-^B^[[m^M
+       M-bM-^TM-^\M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-<M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-<M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-$^[[m^M
+       M-bM-^TM-^B^[[1mexit^[[0m()    M-bM-^TM-^B Thread safety M-bM-^TM-^B MT-Unsafe race:exit M-bM-^TM-^B^[[m^M
+       M-bM-^TM-^TM-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-4M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-4M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^@M-bM-^TM-^X^[[m^M
+       The ^[[1mexit^[[0m() function uses a global variable that is not protected, so it is not thread-safe.^[[m^M
+^[[m^M
+^[[1mCONFORMING^[[0m ^[[1mTO^[[0m^[[m^M
+       POSIX.1-2001, POSIX.1-2008, C89, C99, SVr4, 4.3BSD.^[[m^M
+^[[m^M
+^[[1mNOTES^[[0m^[[m^M
+       The behavior is undefined if one of the functions registered using ^[[1matexit^[[0m(3) and ^[[1mon_exit^[[0m(3) calls either ^[[1mexit^[[0m() or ^[[1mlongjmp^[[0m(3).  Note that a call to ^[[1mexecve^[[0m(2) removes  registrations  created  using^[[m^M
+       ^[[1matexit^[[0m(3) and ^[[1mon_exit^[[0m(3).^[[m^M
+^[[m^M
+       The  use  of  ^[[1mEXIT_SUCCESS^[[0m and ^[[1mEXIT_FAILURE^[[0m is slightly more portable (to non-UNIX environments) than the use of 0 and some nonzero value like 1 or -1.  In particular, VMS uses a different convenM-bM-^@M-^P^[[m^M
+       tion.^[[m^M
+^[[m^M
+       BSD has attempted to standardize exit codes (which some C libraries such as the GNU C library have also adopted); see the file ^[[4m<sysexits.h>^[[24m.^[[m^M
+^[[m^M
+       After ^[[1mexit^[[0m(), the exit status must be transmitted to the parent process.  There are three cases:^[[m^M
+^[[m^M
+       M-bM-^@M-"  If the parent has set ^[[1mSA_NOCLDWAIT^[[0m, or has set the ^[[1mSIGCHLD^[[0m handler to ^[[1mSIG_IGN^[[0m, the status is discarded and the child dies immediately.^[[m^M
+^[[7m Manual page exit(3) line 1 (press h for help or q to quit)^[[27m^[[K^M^[[K^[[?1l^[>^[[?1049l^[[23;0;0t^[[?2004h^[]0;ubuntu@ip-172-31-28-207: ~/project_0^G^[[01;32mubuntu@ip-172-31-28-207^[[00m:^[[01;34m~/project_0^[[00m$ mn^H^[[Kan gcc^M
+^[[?2004l^M^[[?1049h^[[22;0;0t^[[?1h^[=^MGCC(1)                                                                                              GNU
+                             GCC(1)^[[m^M
+^[[m^M
+^[[1mNAME^[[0m^[[m^M
+       gcc - GNU project C and C++ compiler^[[m^M
+^[[m^M
+^[[1mSYNOPSIS^[[0m^[[m^M
+       gcc [^[[1m-c^[[0m|^[[1m-S^[[0m|^[[1m-E^[[0m] [^[[1m-std=^[[0m^[[4mstandard^[[24m]^[[m^M
+           [^[[1m-g^[[0m] [^[[1m-pg^[[0m] [^[[1m-O^[[0m^[[4mlevel^[[24m]^[[m^M
+           [^[[1m-W^[[0m^[[4mwarn^[[24m...] [^[[1m-Wpedantic^[[0m]^[[m^M
+           [^[[1m-I^[[0m^[[4mdir^[[24m...] [^[[1m-L^[[0m^[[4mdir^[[24m...]^[[m^M
+           [^[[1m-D^[[0m^[[4mmacro^[[24m[=^[[4mdefn^[[24m]...] [^[[1m-U^[[0m^[[4mmacro^[[24m]^[[m^M
+           [^[[1m-f^[[0m^[[4moption^[[24m...] [^[[1m-m^[[0m^[[4mmachine-option^[[24m...]^[[m^M
+           [^[[1m-o^[[0m ^[[4moutfile^[[24m] [@^[[4mfile^[[24m] ^[[4minfile^[[24m...^[[m^M
+^[[m^M
+       Only the most useful options are listed here; see below for the remainder.  ^[[1mg++^[[0m accepts mostly the same options as ^[[1mgcc^[[0m.^[[m^M
+^[[m^M
+^[[1mDESCRIPTION^[[0m^[[m^M
+       When you invoke GCC, it normally does preprocessing, compilation, assembly and linking.  The "overall options" allow you to stop this process at an intermediate stage.  For example, the ^[[1m-c^[[0m option^[[m^M
+       says not to run the linker.  Then the output consists of object files output by the assembler.^[[m^M
+^[[m^M
+       Other options are passed on to one or more stages of processing.  Some options control the preprocessor and others the compiler itself.  Yet other options control the assembler and linker; most of^[[m^M
+       these are not documented here, since you rarely need to use any of them.^[[m^M
+^[[m^M
+       Most of the command-line options that you can use with GCC are useful for C programs; when an option is only useful with another language (usually C++), the explanation says so explicitly.  If the^[[m^M
+       description for a particular option does not mention a source language, you can use that option with all supported languages.^[[m^M
+^[[m^M
+       The usual way to run GCC is to run the executable called ^[[1mgcc^[[0m, or ^[[4mmachine^[[24m^[[1m-gcc^[[0m when cross-compiling, or ^[[4mmachine^[[24m^[[1m-gcc-^[[0m^[[4mversion^[[24m to run a specific version of GCC.  When you compile C++ programs, you^[[m^M
+       should invoke GCC as ^[[1mg++^[[0m instead.^[[m^M
+^[[m^M
+       The ^[[1mgcc^[[0m program accepts options and file names as operands.  Many options have multi-letter names; therefore multiple single-letter options may ^[[4mnot^[[24m be grouped: ^[[1m-dv^[[0m is very different from ^[[1m-d^[[0m ^[[1m-v^[[0m.^[[m^M
+^[[m^M
+       You can mix options and other arguments.  For the most part, the order you use doesn't matter.  Order does matter when you use several options of the same kind; for example, if you specify ^[[1m-L^[[0m more^[[m^M
+       than once, the directories are searched in the order specified.  Also, the placement of the ^[[1m-l^[[0m option is significant.^[[m^M
+^[[m^M
+       Many options have long names starting with ^[[1m-f^[[0m or with ^[[1m-W^[[0m---for example, ^[[1m-fmove-loop-invariants^[[0m, ^[[1m-Wformat^[[0m and so on.  Most of these have both positive and negative forms; the negative form of ^[[1m-ffoo^[[0m^[[m^M
+       is ^[[1m-fno-foo^[[0m.  This manual documents only one of these two forms, whichever one is not the default.^[[m^M
+^[[m^M
+       Some options take one or more arguments typically separated either by a space or by the equals sign (^[[1m=^[[0m) from the option name.  Unless documented otherwise, an argument can be either numeric or a^[[m^M
+       string.  Numeric arguments must typically be small unsigned decimal or hexadecimal integers.  Hexadecimal arguments must begin with the ^[[1m0x^[[0m prefix.  Arguments to options that specify a size^[[m^M
+       threshold of some sort may be arbitrarily large decimal or hexadecimal integers followed by a byte size suffix designating a multiple of bytes such as "kB" and "KiB" for kilobyte and kibibyte,^[[m^M
+       respectively, "MB" and "MiB" for megabyte and mebibyte, "GB" and "GiB" for gigabyte and gigibyte, and so on.  Such arguments are designated by ^[[4mbyte-size^[[24m in the following text.  Refer to the NIST,^[[m^M
+       IEC, and other relevant national and international standards for the full listing and explanation of the binary and decimal byte size prefixes.^[[m^M
+^[[m^M
+^[[1mOPTIONS^[[0m^[[m^M
+   ^[[1mOption^[[0m ^[[1mSummary^[[0m^[[m^M
+       Here is a summary of all the options, grouped by type.  Explanations are in the following sections.^[[m^M
+^[[m^M
+       ^[[4mOverall^[[24m ^[[4mOptions^[[24m^[[m^M
+           ^[[1m-c^[[0m  ^[[1m-S^[[0m  ^[[1m-E^[[0m  ^[[1m-o^[[0m ^[[4mfile^[[24m ^[[1m-dumpbase^[[0m ^[[4mdumpbase^[[24m  ^[[1m-dumpbase-ext^[[0m ^[[4mauxdropsuf^[[24m ^[[1m-dumpdir^[[0m ^[[4mdumppfx^[[24m  ^[[1m-x^[[0m ^[[4mlanguage^[[24m ^[[1m-v^[[0m  ^[[1m-###^[[0m  ^[[1m--help^[[0m[^[[1m=^[[0m^[[4mclass^[[24m[^[[1m,...^[[0m]]  ^[[1m--target-help^[[0m  ^[[1m--version^[[0m ^[[1m-pass-exit-codes^[[0m  ^[[1m-pipe^[[0m  ^[[1m-specs=^[[0m^[[4mfile^[[24m^[[m^M
+           ^[[1m-wrapper^[[0m ^[[1m@^[[0m^[[4mfile^[[24m  ^[[1m-ffile-prefix-map=^[[0m^[[4mold^[[24m^[[1m=^[[0m^[[4mnew^[[24m ^[[1m-fplugin=^[[0m^[[4mfile^[[24m  ^[[1m-fplugin-arg-^[[0m^[[4mname^[[24m^[[1m=^[[0m^[[4marg^[[24m ^[[1m-fdump-ada-spec^[[0m[^[[1m-slim^[[0m]  ^[[1m-fada-spec-parent=^[[0m^[[4munit^[[24m  ^[[1m-fdump-go-spec=^[[0m^[[4mfile^[[24m^[[m^M
+^[[7m Manual page gcc(1) line 1 (press h for help or q to quit)^[[27m^[[K^M^[[K/^[[Ka^Ha^[[Kd^Hd^[[Kd^Hd^[[K ^H ^[[K-^H-^[[Kh^Hh^H^[[K^[[Kg^Hg^M^[[K^[[1;1HGCC(1)
+                                              GNU                                                                                              GCC(1)^[[m^M
+^[[2;1H^[[m^M
+^[[3;1H^[[1mNAME^[[0m^[[m^M
+^[[4;1H       gcc - GNU project C and C++ compiler^[[m^M
+^[[5;1H^[[m^M
+^[[6;1H^[[1mSYNOPSIS^[[0m^[[m^M
+^[[7;1H       gcc [^[[1m-c^[[0m|^[[1m-S^[[0m|^[[1m-E^[[0m] [^[[1m-std=^[[0m^[[4mstandard^[[24m]^[[m^M
+^[[8;1H           [^[[1m-g^[[0m] [^[[1m-pg^[[0m] [^[[1m-O^[[0m^[[4mlevel^[[24m]^[[m^M
+^[[9;1H           [^[[1m-W^[[0m^[[4mwarn^[[24m...] [^[[1m-Wpedantic^[[0m]^[[m^M
+^[[10;1H           [^[[1m-I^[[0m^[[4mdir^[[24m...] [^[[1m-L^[[0m^[[4mdir^[[24m...]^[[m^M
+^[[11;1H           [^[[1m-D^[[0m^[[4mmacro^[[24m[=^[[4mdefn^[[24m]...] [^[[1m-U^[[0m^[[4mmacro^[[24m]^[[m^M
+^[[12;1H           [^[[1m-f^[[0m^[[4moption^[[24m...] [^[[1m-m^[[0m^[[4mmachine-option^[[24m...]^[[m^M
+^[[13;1H           [^[[1m-o^[[0m ^[[4moutfile^[[24m] [@^[[4mfile^[[24m] ^[[4minfile^[[24m...^[[m^M
+^[[14;1H^[[m^M
+^[[15;1H       Only the most useful options are listed here; see below for the remainder.  ^[[1mg++^[[0m accepts mostly the same options as ^[[1mgcc^[[0m.^[[m^M
+^[[16;1H^[[m^M
+^[[17;1H^[[1mDESCRIPTION^[[0m^[[m^M
+^[[18;1H       When you invoke GCC, it normally does preprocessing, compilation, assembly and linking.  The "overall options" allow you to stop this process at an intermediate stage.  For example, the ^[[1m-c^[[0m option^[[m^M
+^[[19;1H       says not to run the linker.  Then the output consists of object files output by the assembler.^[[m^M
+^[[20;1H^[[m^M
+^[[21;1H       Other options are passed on to one or more stages of processing.  Some options control the preprocessor and others the compiler itself.  Yet other options control the assembler and linker; most of^[[m^M
+^[[22;1H       these are not documented here, since you rarely need to use any of them.^[[m^M
+^[[23;1H^[[m^M
+^[[24;1H       Most of the command-line options that you can use with GCC are useful for C programs; when an option is only useful with another language (usually C++), the explanation says so explicitly.  If the^[[m^M
+^[[25;1H       description for a particular option does not mention a source language, you can use that option with all supported languages.^[[m^M
+^[[26;1H^[[m^M
+^[[27;1H       The usual way to run GCC is to run the executable called ^[[1mgcc^[[0m, or ^[[4mmachine^[[24m^[[1m-gcc^[[0m when cross-compiling, or ^[[4mmachine^[[24m^[[1m-gcc-^[[0m^[[4mversion^[[24m to run a specific version of GCC.  When you compile C++ programs, you^[[m^M
+^[[28;1H       should invoke GCC as ^[[1mg++^[[0m instead.^[[m^M
+^[[29;1H^[[m^M
+^[[30;1H       The ^[[1mgcc^[[0m program accepts options and file names as operands.  Many options have multi-letter names; therefore multiple single-letter options may ^[[4mnot^[[24m be grouped: ^[[1m-dv^[[0m is very different from ^[[1m-d^[[0m ^[[1m-v^[[0m.^[[m^M
+^[[31;1H^[[m^M
+^[[32;1H       You can mix options and other arguments.  For the most part, the order you use doesn't matter.  Order does matter when you use several options of the same kind; for example, if you specify ^[[1m-L^[[0m more^[[m^M
+^[[33;1H       than once, the directories are searched in the order specified.  Also, the placement of the ^[[1m-l^[[0m option is significant.^[[m^M
+^[[34;1H^[[m^M
+^[[35;1H       Many options have long names starting with ^[[1m-f^[[0m or with ^[[1m-W^[[0m---for example, ^[[1m-fmove-loop-invariants^[[0m, ^[[1m-Wformat^[[0m and so on.  Most of these have both positive and negative forms; the negative form of ^[[1m-ffoo^[[0m^[[m^M
+^[[36;1H       is ^[[1m-fno-foo^[[0m.  This manual documents only one of these two forms, whichever one is not the default.^[[m^M
+^[[37;1H^[[m^M
+^[[38;1H       Some options take one or more arguments typically separated either by a space or by the equals sign (^[[1m=^[[0m) from the option name.  Unless documented otherwise, an argument can be either numeric or a^[[m^M
+^[[39;1H       string.  Numeric arguments must typically be small unsigned decimal or hexadecimal integers.  Hexadecimal arguments must begin with the ^[[1m0x^[[0m prefix.  Arguments to options that specify a size^[[m^M
+^[[40;1H       threshold of some sort may be arbitrarily large decimal or hexadecimal integers followed by a byte size suffix designating a multiple of bytes such as "kB" and "KiB" for kilobyte and kibibyte,^[[m^M
+^[[41;1H       respectively, "MB" and "MiB" for megabyte and mebibyte, "GB" and "GiB" for gigabyte and gigibyte, and so on.  Such arguments are designated by ^[[4mbyte-size^[[24m in the following text.  Refer to the NIST,^[[m^M
+^[[42;1H       IEC, and other relevant national and international standards for the full listing and explanation of the binary and decimal byte size prefixes.^[[m^M
+^[[43;1H^[[m^M
+^[[44;1H^[[1mOPTIONS^[[0m^[[m^M
+^[[45;1H   ^[[1mOption^[[0m ^[[1mSummary^[[0m^[[m^M
+^[[46;1H       Here is a summary of all the options, grouped by type.  Explanations are in the following sections.^[[m^M
+^[[47;1H^[[m^M
+^[[48;1H       ^[[4mOverall^[[24m ^[[4mOptions^[[24m^[[m^M
+^[[49;1H           ^[[1m-c^[[0m  ^[[1m-S^[[0m  ^[[1m-E^[[0m  ^[[1m-o^[[0m ^[[4mfile^[[24m ^[[1m-dumpbase^[[0m ^[[4mdumpbase^[[24m  ^[[1m-dumpbase-ext^[[0m ^[[4mauxdropsuf^[[24m ^[[1m-dumpdir^[[0m ^[[4mdumppfx^[[24m  ^[[1m-x^[[0m ^[[4mlanguage^[[24m ^[[1m-v^[[0m  ^[[1m-###^[[0m  ^[[1m--help^[[0m[^[[1m=^[[0m^[[4mclass^[[24m[^[[1m,...^[[0m]]  ^[[1m--target-help^[[0m  ^[[1m--version^[[0m ^[[1m-pass-exit-codes^[[0m  ^[[1m-pipe^[[0m  ^[[1m-specs=^[[0m^[[4mfile^[[24m^[[m^M
+^[[50;1H           ^[[1m-wrapper^[[0m ^[[1m@^[[0m^[[4mfile^[[24m  ^[[1m-ffile-prefix-map=^[[0m^[[4mold^[[24m^[[1m=^[[0m^[[4mnew^[[24m ^[[1m-fplugin=^[[0m^[[4mfile^[[24m  ^[[1m-fplugin-arg-^[[0m^[[4mname^[[24m^[[1m=^[[0m^[[4marg^[[24m ^[[1m-fdump-ada-spec^[[0m[^[[1m-slim^[[0m]  ^[[1m-fada-spec-parent=^[[0m^[[4munit^[[24m  ^[[1m-fdump-go-spec=^[[0m^[[4mfile^[[24m^[[m^M
+^[[51;1H^[[1;1HGCC(1)                                                                                              GNU
+   GCC(1)^[[m^M
+^[[2;1H^[[m^M
+^[[3;1H^[[1mNAME^[[0m^[[m^M
+^[[4;1H       gcc - GNU project C and C++ compiler^[[m^M
+^[[5;1H^[[m^M
+^[[6;1H^[[1mSYNOPSIS^[[0m^[[m^M
+^[[7;1H       gcc [^[[1m-c^[[0m|^[[1m-S^[[0m|^[[1m-E^[[0m] [^[[1m-std=^[[0m^[[4mstandard^[[24m]^[[m^M
+^[[8;1H           [^[[1m-g^[[0m] [^[[1m-pg^[[0m] [^[[1m-O^[[0m^[[4mlevel^[[24m]^[[m^M
+^[[9;1H           [^[[1m-W^[[0m^[[4mwarn^[[24m...] [^[[1m-Wpedantic^[[0m]^[[m^M
+^[[10;1H           [^[[1m-I^[[0m^[[4mdir^[[24m...] [^[[1m-L^[[0m^[[4mdir^[[24m...]^[[m^M
+^[[11;1H           [^[[1m-D^[[0m^[[4mmacro^[[24m[=^[[4mdefn^[[24m]...] [^[[1m-U^[[0m^[[4mmacro^[[24m]^[[m^M
+^[[12;1H           [^[[1m-f^[[0m^[[4moption^[[24m...] [^[[1m-m^[[0m^[[4mmachine-option^[[24m...]^[[m^M
+^[[13;1H           [^[[1m-o^[[0m ^[[4moutfile^[[24m] [@^[[4mfile^[[24m] ^[[4minfile^[[24m...^[[m^M
+^[[14;1H^[[m^M
+^[[15;1H       Only the most useful options are listed here; see below for the remainder.  ^[[1mg++^[[0m accepts mostly the same options as ^[[1mgcc^[[0m.^[[m^M
+^[[16;1H^[[m^M
+^[[17;1H^[[1mDESCRIPTION^[[0m^[[m^M
+^[[18;1H       When you invoke GCC, it normally does preprocessing, compilation, assembly and linking.  The "overall options" allow you to stop this process at an intermediate stage.  For example, the ^[[1m-c^[[0m option^[[m^M
+^[[19;1H       says not to run the linker.  Then the output consists of object files output by the assembler.^[[m^M
+^[[20;1H^[[m^M
+^[[21;1H       Other options are passed on to one or more stages of processing.  Some options control the preprocessor and others the compiler itself.  Yet other options control the assembler and linker; most of^[[m^M
+^[[22;1H       these are not documented here, since you rarely need to use any of them.^[[m^M
+^[[23;1H^[[m^M
+^[[24;1H       Most of the command-line options that you can use with GCC are useful for C programs; when an option is only useful with another language (usually C++), the explanation says so explicitly.  If the^[[m^M
+^[[25;1H       description for a particular option does not mention a source language, you can use that option with all supported languages.^[[m^M
+^[[26;1H^[[m^M
+^[[27;1H       The usual way to run GCC is to run the executable called ^[[1mgcc^[[0m, or ^[[4mmachine^[[24m^[[1m-gcc^[[0m when cross-compiling, or ^[[4mmachine^[[24m^[[1m-gcc-^[[0m^[[4mversion^[[24m to run a specific version of GCC.  When you compile C++ programs, you^[[m^M
+^[[28;1H       should invoke GCC as ^[[1mg++^[[0m instead.^[[m^M
+^[[29;1H^[[m^M
+^[[30;1H       The ^[[1mgcc^[[0m program accepts options and file names as operands.  Many options have multi-letter names; therefore multiple single-letter options may ^[[4mnot^[[24m be grouped: ^[[1m-dv^[[0m is very different from ^[[1m-d^[[0m ^[[1m-v^[[0m.^[[m^M
+^[[31;1H^[[m^M
+^[[32;1H       You can mix options and other arguments.  For the most part, the order you use doesn't matter.  Order does matter when you use several options of the same kind; for example, if you specify ^[[1m-L^[[0m more^[[m^M
+^[[33;1H       than once, the directories are searched in the order specified.  Also, the placement of the ^[[1m-l^[[0m option is significant.^[[m^M
+^[[34;1H^[[m^M
+^[[35;1H       Many options have long names starting with ^[[1m-f^[[0m or with ^[[1m-W^[[0m---for example, ^[[1m-fmove-loop-invariants^[[0m, ^[[1m-Wformat^[[0m and so on.  Most of these have both positive and negative forms; the negative form of ^[[1m-ffoo^[[0m^[[m^M
+^[[36;1H       is ^[[1m-fno-foo^[[0m.  This manual documents only one of these two forms, whichever one is not the default.^[[m^M
+^[[37;1H^[[m^M
+^[[38;1H       Some options take one or more arguments typically separated either by a space or by the equals sign (^[[1m=^[[0m) from the option name.  Unless documented otherwise, an argument can be either numeric or a^[[m^M
+^[[39;1H       string.  Numeric arguments must typically be small unsigned decimal or hexadecimal integers.  Hexadecimal arguments must begin with the ^[[1m0x^[[0m prefix.  Arguments to options that specify a size^[[m^M
+^[[40;1H       threshold of some sort may be arbitrarily large decimal or hexadecimal integers followed by a byte size suffix designating a multiple of bytes such as "kB" and "KiB" for kilobyte and kibibyte,^[[m^M
+^[[41;1H       respectively, "MB" and "MiB" for megabyte and mebibyte, "GB" and "GiB" for gigabyte and gigibyte, and so on.  Such arguments are designated by ^[[4mbyte-size^[[24m in the following text.  Refer to the NIST,^[[m^M
+^[[42;1H       IEC, and other relevant national and international standards for the full listing and explanation of the binary and decimal byte size prefixes.^[[m^M
+^[[43;1H^[[m^M
+^[[44;1H^[[1mOPTIONS^[[0m^[[m^M
+^[[45;1H   ^[[1mOption^[[0m ^[[1mSummary^[[0m^[[m^M
+^[[46;1H       Here is a summary of all the options, grouped by type.  Explanations are in the following sections.^[[m^M
+^[[47;1H^[[m^M
+^[[48;1H       ^[[4mOverall^[[24m ^[[4mOptions^[[24m^[[m^M
+^[[49;1H           ^[[1m-c^[[0m  ^[[1m-S^[[0m  ^[[1m-E^[[0m  ^[[1m-o^[[0m ^[[4mfile^[[24m ^[[1m-dumpbase^[[0m ^[[4mdumpbase^[[24m  ^[[1m-dumpbase-ext^[[0m ^[[4mauxdropsuf^[[24m ^[[1m-dumpdir^[[0m ^[[4mdumppfx^[[24m  ^[[1m-x^[[0m ^[[4mlanguage^[[24m ^[[1m-v^[[0m  ^[[1m-###^[[0m  ^[[1m--help^[[0m[^[[1m=^[[0m^[[4mclass^[[24m[^[[1m,...^[[0m]]  ^[[1m--target-help^[[0m  ^[[1m--version^[[0m ^[[1m-pass-exit-codes^[[0m  ^[[1m-pipe^[[0m  ^[[1m-specs=^[[0m^[[4mfile^[[24m^[[m^M
+^[[50;1H           ^[[1m-wrapper^[[0m ^[[1m@^[[0m^[[4mfile^[[24m  ^[[1m-ffile-prefix-map=^[[0m^[[4mold^[[24m^[[1m=^[[0m^[[4mnew^[[24m ^[[1m-fplugin=^[[0m^[[4mfile^[[24m  ^[[1m-fplugin-arg-^[[0m^[[4mname^[[24m^[[1m=^[[0m^[[4marg^[[24m ^[[1m-fdump-ada-spec^[[0m[^[[1m-slim^[[0m]  ^[[1m-fada-spec-parent=^[[0m^[[4munit^[[24m  ^[[1m-fdump-go-spec=^[[0m^[[4mfile^[[24m^[[m^M
+^[[51;1H...skipping...^M
+       To tell GCC to emit extra information for use by a debugger, in almost all cases you need only to ^[[7madd ^[[27m^[[1m^[[7m-g^[[27m^[[0m to your other options.^[[m^M
+^[[m^M
+       GCC allows you to use ^[[1m-g^[[0m with ^[[1m-O^[[0m.  The shortcuts taken by optimized code may occasionally be surprising: some variables you declared may not exist at all; flow of control may briefly move where^[[m^M
+       you did not expect it; some statements may not be executed because they compute constant results or their values are already at hand; some statements may execute in different places because they^[[m^M
+       have been moved out of loops.  Nevertheless it is possible to debug optimized output.  This makes it reasonable to use the optimizer for programs that might have bugs.^[[m^M
+^[[m^M
+       If you are not using some other optimization option, consider using ^[[1m-Og^[[0m with ^[[1m-g^[[0m.  With no ^[[1m-O^[[0m option at all, some compiler passes that collect information useful for debugging do not run at all, so^[[m^M
+       that ^[[1m-Og^[[0m may result in a better debugging experience.^[[m^M
+^[[m^M
+       ^[[1m-g^[[0m  Produce debugging information in the operating system's native format (stabs, COFF, XCOFF, or DWARF).  GDB can work with this debugging information.^[[m^M
+^[[m^M
+           On most systems that use stabs format, ^[[1m-g^[[0m enables use of extra debugging information that only GDB can use; this extra information makes debugging work better in GDB but probably makes other^[[m^M
+           debuggers crash or refuse to read the program.  If you want to control for certain whether to generate the extra information, use ^[[1m-gstabs+^[[0m, ^[[1m-gstabs^[[0m, ^[[1m-gxcoff+^[[0m, ^[[1m-gxcoff^[[0m, or ^[[1m-gvms^[[0m (see below).^[[m^M
+^[[m^M
+       ^[[1m-ggdb^[[0m^[[m^M
+           Produce debugging information for use by GDB.  This means to use the most expressive format available (DWARF, stabs, or the native format if neither of those are supported), including GDB^[[m^M
+           extensions if at all possible.^[[m^M
+^[[m^M
+       ^[[1m-gdwarf^[[0m^[[m^M
+       ^[[1m-gdwarf-^[[0m^[[4mversion^[[24m^[[m^M
+           Produce debugging information in DWARF format (if that is supported).  The value of ^[[4mversion^[[24m may be either 2, 3, 4 or 5; the default version for most targets is 5 (with the exception of^[[m^M
+           VxWorks, TPF and Darwin/Mac OS X, which default to version 2, and AIX, which defaults to version 4).^[[m^M
+^[[m^M
+           Note that with DWARF Version 2, some ports require and always use some non-conflicting DWARF 3 extensions in the unwind tables.^[[m^M
+^[[m^M
+           Version 4 may require GDB 7.0 and ^[[1m-fvar-tracking-assignments^[[0m for maximum benefit. Version 5 requires GDB 8.0 or higher.^[[m^M
+^[[m^M
+           GCC no longer supports DWARF Version 1, which is substantially different than Version 2 and later.  For historical reasons, some other DWARF-related options such as ^[[1m-fno-dwarf2-cfi-asm^[[0m) retain^[[m^M
+           a reference to DWARF Version 2 in their names, but apply to all currently-supported versions of DWARF.^[[m^M
+^[[m^M
+       ^[[1m-gstabs^[[0m^[[m^M
+           Produce debugging information in stabs format (if that is supported), without GDB extensions.  This is the format used by DBX on most BSD systems.  On MIPS, Alpha and System V Release 4^[[m^M
+           systems this option produces stabs debugging output that is not understood by DBX.  On System V Release 4 systems this option requires the GNU assembler.^[[m^M
+^[[m^M
+       ^[[1m-gstabs+^[[0m^[[m^M
+           Produce debugging information in stabs format (if that is supported), using GNU extensions understood only by the GNU debugger (GDB).  The use of these extensions is likely to make other^[[m^M
+           debuggers crash or refuse to read the program.^[[m^M
+^[[m^M
+       ^[[1m-gxcoff^[[0m^[[m^M
+           Produce debugging information in XCOFF format (if that is supported).  This is the format used by the DBX debugger on IBM RS/6000 systems.^[[m^M
+^[[m^M
+       ^[[1m-gxcoff+^[[0m^[[m^M
+           Produce debugging information in XCOFF format (if that is supported), using GNU extensions understood only by the GNU debugger (GDB).  The use of these extensions is likely to make other^[[m^M
+           debuggers crash or refuse to read the program, and may cause assemblers other than the GNU assembler (GAS) to fail with an error.^[[m^M
+^[[m^M
+       ^[[1m-gvms^[[0m^[[m^M
+           Produce debugging information in Alpha/VMS debug format (if that is supported).  This is the format used by DEBUG on Alpha/VMS systems.^[[m^M
+^[[m^M
+       ^[[1m-g^[[0m^[[4mlevel^[[24m^[[m^M
+       ^[[1m-ggdb^[[0m^[[4mlevel^[[24m^[[m^M
+^[[7m Manual page gcc(1) line 4914 (press h for help or q to quit)^[[27m^[[K^M^[[K^[[?1l^[>^[[?1049l^[[23;0;0t^[[?2004h^[]0;ubuntu@ip-172-31-28-207: ~/project_0^G^[[01;32mubuntu@ip-172-31-28-207^[[00m:^[[01;34m~/project_0^[[00m$ nano Makefile^M
+^[[?2004l^M^[[?2004h^[[?1049h^[[22;0;0t^[[1;51r^[(B^[[m^[[4l^[[?7h^[[39;49m^[[?1h^[=^[[?1h^[=^[[?25l^[[39;49m^[(B^[[m^[[H^[[2J^[[49;98H^[(B^[[0;7m[ Reading... ]^[(B^[[m^[[49;97H^[(B^[[0;7m[ Read 2 lines ]^[(B^[[m^[[H^[(B^[[0;7m  GNU nano 6.2                                                                                         Makefile
+           I      ^[[1;208H^[(B^[[m^M^[[50d^[(B^[[0;7m^G^[(B^[[m Help^[[50;18H^[(B^[[0;7m^O^[(B^[[m Write Out     ^[(B^[[0;7m^W^[(B^[[m Where Is^[[52G^[(B^[[0;7m^K^[(B^[[m Cut^[[50;69H^[(B^[[0;7m^T^[(B^[[m Execute^[[86G^[(B^[[0;7m^C^[(B^[[m Location^[[103G^[(B^[[0;7mM-U^[(B^[[m Undo^[[50;120H^[(B^[[0;7mM-A^[(B^[[m Set Mark     ^[(B^[[0;7mM-]^[(B^[[m To Bracket   ^[(B^[[0;7mM-Q^[(B^[[m Previous     ^[(B^[[0;7m^B^[(B^[[m Back^[[50;188H^[(B^[[0;7m^M-bM-^WM-^B^[(B^[[m Prev Word^M^[[51d^[(B^[[0;7m^X^[(B^[[m Exit^[[51;18H^[(B^[[0;7m^R^[(B^[[m Read File     ^[(B^[[0;7m^\^[(B^[[m Replace^[[52G^[(B^[[0;7m^U^[(B^[[m Paste^[[51;69H^[(B^[[0;7m^J^[(B^[[m Justify^[[86G^[(B^[[0;7m^/^[(B^[[m Go To Line    ^[(B^[[0;7mM-E^[(B^[[m Redo^[[51;120H^[(B^[[0;7mM-6^[(B^[[m Copy^[[51;137H^[(B^[[0;7m^Q^[(B^[[m Where Was     ^[(B^[[0;7mM-W^[(B^[[m Next^[[51;171H^[(B^[[0;7m^F^[(B^[[m Forward^[[188G^[(B^[[0;7m^M-bM-^VM-8^[(B^[[m Next Word^M^[[2d^[(B^[[0;1m^[[34mtestmake:^[[39m^[(B^[[m test.c^[[3;9Hgcc -o testmake test.c -I.^[[42m ^M^[[A^[[49m^[(B^[[m^[[?12l^[[?25h^[[?25l^[[49d^[[J^[[51d^[[?12l^[[?25h^[[51;1H^[[?1049l^[[23;0;0t^M^[[?1l^[>^[[?2004l^[[?2004h^[]0;ubuntu@ip-172-31-28-207: ~/project_0^G^[[01;32mubuntu@ip-172-31-28-207^[[00m:^[[01;34m~/project_0^[[00m$ make^M
+^[[?2004l^Mmake: 'testmake' is up to date.^M
+^[[?2004h^[]0;ubuntu@ip-172-31-28-207: ~/project_0^G^[[01;32mubuntu@ip-172-31-28-207^[[00m:^[[01;34m~/project_0^[[00m$ ./testmake^M
+^[[?2004l^MSegmentation fault (core dumped)^M
+^[[?2004h^[]0;ubuntu@ip-172-31-28-207: ~/project_0^G^[[01;32mubuntu@ip-172-31-28-207^[[00m:^[[01;34m~/project_0^[[00m$ exit^M
+^[[?2004l^Mexit^M
+
+Script done on 2022-08-27 16:07:03+00:00 [COMMAND_EXIT_CODE="139"]
