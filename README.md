@@ -23,4 +23,4 @@ STEP 4:
 
 after running the gdb, the debugger determined that the error was in line 7
 strncpy(buffer, "Hello World!", 14);
-
+This line caused an issue with the code because the buffer is of the char pointer type (char*) and strncpy would use strings rather than chars.
