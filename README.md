@@ -8,4 +8,12 @@ STEP 1:
 - No tutorials consulted (I have prior work experience with AWS EC2)
 - No issues along the way
 
-STEP 2: --From project0.txt
+STEP 2: View project0.txt
+
+STEP3:
+strncpy: #include <string.h>
+exit: #include <stdlib.h>
+printf: #include <stdio.h>
+
+-g Produces debugging information in the operating system's native format (stabs, COFF, XCOFF, or DWARF). GDB can work with this debugging information
+
